@@ -1,0 +1,55 @@
+/* QuickActions.css */
+.quick-actions {
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 16px;
+}
+
+.quick-actions-header {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quick-actions-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.quick-action-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.quick-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.quick-action-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .quick-actions {
+    padding: 10px 12px;
+  }
+  
+  .quick-action-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}

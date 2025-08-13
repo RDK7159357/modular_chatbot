@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import Message from './Message';
 import './MessageList.css';
 
-const MessageList = ({ messages }) => {
+const MessageList = ({ messages, onNavigationSuggestion }) => {
   const endOfMessagesRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -15,7 +15,11 @@ const MessageList = ({ messages }) => {
   return (
     <div className="message-list">
       {messages.map((msg, index) => (
-        <Message key={index} message={msg} />
+        <Message 
+          key={index} 
+          message={msg} 
+          onNavigationSuggestion={onNavigationSuggestion}
+        />
       ))}
       <div ref={endOfMessagesRef} />
     </div>

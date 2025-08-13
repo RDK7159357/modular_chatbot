@@ -1,2 +1,131 @@
 /* src/App.css */
-/* We'll add styles directly into our components for this project to keep things simple */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.App {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.main-content {
+  min-height: calc(100vh - 120px);
+  padding: 20px;
+}
+
+/* Page Styles */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  text-align: left;
+}
+
+.page-container h1 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-container h2 {
+  color: #374151;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.page-container h3 {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.content-section {
+  margin-bottom: 2rem;
+}
+
+/* Card Layouts */
+.info-cards, .departments-grid, .faculty-grid, .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-card, .department-card, .faculty-card, .service-card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover, .department-card:hover, .faculty-card:hover, .service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+.info-card h3, .department-card h3, .faculty-card h3, .service-card h3 {
+  color: #667eea;
+  margin-bottom: 0.75rem;
+}
+
+/* Quick Links */
+.quick-links {
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0 0;
+}
+
+.quick-links li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.quick-links li:hover {
+  color: #667eea;
+}
+
+.quick-links li:last-child {
+  border-bottom: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .page-container {
+    padding: 1.5rem;
+    margin: 0 10px;
+  }
+  
+  .page-container h1 {
+    font-size: 2rem;
+  }
+  
+  .info-cards, .departments-grid, .faculty-grid, .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
